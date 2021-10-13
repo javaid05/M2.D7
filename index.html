@@ -21,40 +21,64 @@
         /* .display-4 > h1 => <div class='display-4'> <h1> </h1> </div>  */
         background-color: blue;
       }
+      /* also we can do like  */
+      .jumbotron h1 {
+        background-color: brown;
+      }
       /* EX2) Write a selector to target every children of the navbar */
 
-      div.nav-scroller > nav.nav > * {
+      /* div.nav-scroller > nav.nav > * {
         color: brown !important;
-      }
-      /*EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
-      .jumbotron > p > .text-white {
-        background-color: chartreuse;
-      }
+      } */
+      /*also we can do that  without !important class colr will not be changed bcz it we have text-muted bootstrap class*/
+      /* nav.nav > a {
+        color: red !important;
+      } */
+      /* nav.nav > * {
+        color: green !important;
+      } */
 
-      /* EX4) Write a selector to target the first blogpost */
-      div.blog-post:first-of-type {
+      /*EX3) Write a selector to target the "continue reading..." inside the jumbotron*  here we target the jumbotron and we have multiple paragraph but we will target the last paragraph where inside ancher tage continue reading.*/
+
+      .jumbotron .col-md-6 p:last-of-type a {
+        color: blue !important;
+      }
+      /* EX4) Write a selector to target the first blogpost ,here we have target blog post main, then blog post,then inside h3 of blog post which is first sibling then blog post  here write first sibling with + symbol and tage name h3*/
+      /* div.blog-post:first-of-type {
         background-color: red;
+      } */
+      main .blog-main > h3 + .blog-post {
+        color: cornflowerblue !important;
       }
       /* EX5) Write a selector to target the "even" links in the navbar */
-
-      /* EX6) Write a selector to target the last blog post */
-      div.blog-post:last-of-type {
+      nav.nav > a:nth-child(2n) {
+        color: darkblue !important;
+      }
+      /* EX6) Write a selector to target the last blog post  need to create the space why ask tech*/
+      /* div.blog-post:last-of-type {
         background-color: red;
+      } */
+      main .blog-main .blog-post:last-of-type {
+        color: darkgoldenrod !important;
       }
 
-      /*
-            
-            
-            
-            
-            
-            
-            
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
-        */
+      /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
+
+      main .blog-sidebar div:nth-child(2) > ol > li {
+        background-color: brown !important;
+      }
+      /* EX8) Write a selector to target the second post author */
+      main .blog-main .blog-post:nth-child(3) > h2 + p > a {
+        color: darkgreen !important;
+      }
+      /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
+      p:last-of-type > a {
+        color: darkmagenta !important;
+      }
+      /* EX10) Write a selector to target the footer */
+      footer {
+        background-color: darkturquoise !important;
+      }
     </style>
     <meta charset="utf-8" />
     <meta
